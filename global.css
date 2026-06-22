@@ -1,8 +1,3 @@
-/* ============================================================
-   AlumKit — global.css
-   Sitio multipágina · ONG educativa (diseño original)
-   ============================================================ */
-
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;700&display=swap');
 
 :root {
@@ -58,7 +53,6 @@ img { max-width: 100%; display: block; }
   margin-inline: auto;
 }
 
-/* —— Type ramp —— */
 .eyebrow {
   font-size: 12.5px;
   font-weight: 600;
@@ -90,7 +84,7 @@ p  { margin: 0; color: var(--c-ink-soft); }
   letter-spacing: -0.01em;
 }
 
-/* —— Buttons —— */
+/* —— Botones —— */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -128,7 +122,6 @@ p  { margin: 0; color: var(--c-ink-soft); }
 .btn .arrow { transition: transform .2s ease; }
 .btn:hover .arrow { transform: translateX(3px); }
 
-/* —— Reveal on scroll —— */
 .reveal { opacity: 0; transform: translateY(14px); transition: opacity .8s cubic-bezier(.2,.65,.2,1), transform .8s cubic-bezier(.2,.65,.2,1); }
 .reveal.in { opacity: 1; transform: none; }
 .reveal[data-delay="1"] { transition-delay: .08s; }
@@ -202,7 +195,7 @@ p  { margin: 0; color: var(--c-ink-soft); }
 }
 .nav-burger svg { width: 22px; height: 22px; }
 
-/* mobile menu */
+/* menu responsive  */
 .mobile-menu {
   display: none;
   position: fixed;
@@ -255,7 +248,7 @@ p  { margin: 0; color: var(--c-ink-soft); }
   .mobile-menu { display: block; }
 }
 
-/* —— Hero (home) —— */
+/* —— Hero —— */
 .hero {
   padding: 64px 0 96px;
   position: relative;
@@ -392,7 +385,7 @@ p  { margin: 0; color: var(--c-ink-soft); }
   100% { box-shadow: 0 0 0 0 rgba(110,231,183,0); }
 }
 
-/* —— Interior page hero —— */
+/* —— hero —— */
 .page-hero {
   position: relative;
   overflow: hidden;
@@ -419,7 +412,7 @@ p  { margin: 0; color: var(--c-ink-soft); }
 }
 @media (max-width: 900px) { .page-hero-grid { grid-template-columns: 1fr; gap: 28px; } }
 
-/* —— Logos strip —— */
+/* —— Logos —— */
 .logos {
   padding: 24px 0 8px;
   border-top: 1px solid var(--c-border);
@@ -454,7 +447,7 @@ p  { margin: 0; color: var(--c-ink-soft); }
 .logo-chip .circ { width: 10px; height: 10px; border-radius: 50%; border: 2px solid currentColor; }
 .logo-chip .bar { width: 14px; height: 3px; background: currentColor; border-radius: 2px; }
 
-/* —— Section base —— */
+
 .section { padding: 112px 0; }
 .section-sm { padding: 80px 0; }
 @media (max-width: 760px) { .section { padding: 72px 0; } .section-sm { padding: 56px 0; } }
@@ -470,7 +463,7 @@ p  { margin: 0; color: var(--c-ink-soft); }
 }
 .surface { background: var(--c-surface); border-top: 1px solid var(--c-border); border-bottom: 1px solid var(--c-border); }
 
-/* —— About —— */
+/* —— sobre nos—— */
 .about-grid {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
@@ -534,7 +527,7 @@ p  { margin: 0; color: var(--c-ink-soft); }
 .point h4 { font-size: 16px; font-weight: 600; color: var(--c-primary-ink); margin-bottom: 4px; }
 .point p { font-size: 14.5px; color: var(--c-ink-soft); line-height: 1.55; }
 
-/* —— Values grid (about page) —— */
+/* —— valores grilla —— */
 .values-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -559,7 +552,7 @@ p  { margin: 0; color: var(--c-ink-soft); }
 .value-card h3 { font-size: 19px; margin-bottom: 10px; }
 .value-card p { font-size: 14.5px; line-height: 1.55; }
 
-/* —— Timeline (about page) —— */
+/* —— linea de tiempo —— */
 .timeline { display: grid; gap: 0; margin-top: 8px; }
 .tl-item {
   display: grid;
@@ -583,7 +576,7 @@ p  { margin: 0; color: var(--c-ink-soft); }
   .tl-item { grid-template-columns: 1fr; gap: 8px; }
 }
 
-/* —— Team grid (about page) —— */
+/* —— equipo grilla —— */
 .team-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -603,7 +596,7 @@ p  { margin: 0; color: var(--c-ink-soft); }
 .team-card .name { margin-top: 16px; font-size: 16px; font-weight: 600; color: var(--c-primary-ink); }
 .team-card .role { font-size: 13.5px; color: var(--c-ink-mute); margin-top: 3px; }
 
-/* —— Impact stats —— */
+/* —— impacto estadistica —— */
 .stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -651,7 +644,7 @@ p  { margin: 0; color: var(--c-ink-soft); }
   font-size: 11px; font-family: ui-monospace, monospace; font-weight: 600;
 }
 
-/* —— Impact: breakdown bars —— */
+/* —— Impacto: barra */
 .breakdown { display: grid; gap: 22px; margin-top: 8px; }
 .bar-row { display: grid; gap: 10px; }
 .bar-row .bar-top { display: flex; justify-content: space-between; align-items: baseline; }
@@ -666,7 +659,7 @@ p  { margin: 0; color: var(--c-ink-soft); }
   transition: width 1.4s cubic-bezier(.2,.7,.2,1);
 }
 
-/* —— How we help cards —— */
+/* —— tarjetas —— */
 .help { background: var(--c-primary-ink); color: white; }
 .help h2 { color: white; }
 .help .lede { color: rgba(255,255,255,.7); }
@@ -723,7 +716,7 @@ p  { margin: 0; color: var(--c-ink-soft); }
 .help-card .more svg { width: 16px; height: 16px; }
 .help-card:hover .more { gap: 12px; color: white; }
 
-/* —— Program detail (programas page) —— */
+/* —— Programa detalle —— */
 .program-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -769,7 +762,7 @@ p  { margin: 0; color: var(--c-ink-soft); }
 }
 .feature-item .tick svg { width: 13px; height: 13px; }
 
-/* —— Testimonials —— */
+/* —— Testimonios—— */
 .t-grid {
   display: grid;
   grid-template-columns: 1.2fr 1fr 1fr;
@@ -835,7 +828,7 @@ p  { margin: 0; color: var(--c-ink-soft); }
 .who-name { font-size: 14px; font-weight: 600; color: var(--c-primary-ink); }
 .who-role { font-size: 12.5px; color: var(--c-ink-mute); margin-top: 2px; }
 
-/* —— Story feature (historias page) —— */
+/* —— historia —— */
 .avatar {
   width: 40px; height: 40px;
   border-radius: 50%;
@@ -850,8 +843,6 @@ p  { margin: 0; color: var(--c-ink-soft); }
   overflow: hidden; /* recorta la foto al círculo cuando se usa .avatar-img */
 }
 
-/* Avatar con foto real en vez de iniciales.
-   Uso: <img class="avatar avatar-img" src="img/personas/joaquin-ramos.jpg" alt="Joaquín Ramos"> */
 .avatar-img {
   background: none;
   padding: 0;
@@ -890,7 +881,7 @@ p  { margin: 0; color: var(--c-ink-soft); }
   letter-spacing: -0.01em;
 }
 
-/* —— Contact —— */
+/* —— Contacto —— */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1.1fr;
@@ -1070,7 +1061,6 @@ footer.foot {
 }
 .foot-bottom .legal { display: flex; gap: 24px; flex-wrap: wrap; }
 
-/* —— Helpers —— */
 .grid-bg {
   position: absolute;
   inset: 0;
@@ -1086,7 +1076,6 @@ footer.foot {
 .text-center { text-align: center; }
 .mt-0 { margin-top: 0; }
 
-/* —— Tweaks panel (vanilla) —— */
 .twk-panel {
   position: fixed;
   right: 16px; bottom: 16px;
@@ -1154,10 +1143,8 @@ footer.foot {
 .twk-swatch:hover { transform: scale(1.1); }
 .twk-swatch[aria-checked="true"] { border-color: var(--c-ink); }
 
-/* hidden until floating cards toggle */
 .hero-floating-top.is-hidden, .hero-floating-card.is-hidden { display: none; }
 
-/* serif accent off */
 body.no-serif-accent .accent-serif {
   font-family: inherit;
   font-style: normal;

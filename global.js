@@ -1,12 +1,7 @@
-/* ============================================================
-   AlumKit — global.js
-   Nav · reveal · count-up · barras · formulario · Tweaks
-   Compartido por todas las páginas. Vanilla JS, sin dependencias.
-   ============================================================ */
 (function () {
   'use strict';
 
-  /* ---------- Palettes & type stacks ---------- */
+  /* ---------- Paleta Colores ---------- */
   var PALETTES = {
     institutional: { '--c-primary':'#143C7A','--c-primary-ink':'#0B2750','--c-secondary':'#2C6CDF','--c-celeste':'#DCEBFF','--c-celeste-soft':'#EFF5FF','--c-accent':'#EC6A4C' },
     ocean:         { '--c-primary':'#0E4F6E','--c-primary-ink':'#08364C','--c-secondary':'#0EA5C0','--c-celeste':'#CFF0F4','--c-celeste-soft':'#EAF8FA','--c-accent':'#F4A261' },
@@ -48,7 +43,7 @@
     floats.forEach(function (el) { el.classList.toggle('is-hidden', !tweaks.showFloatingCards); });
   }
 
-  /* ---------- Sticky nav ---------- */
+  /* ---------- nav ---------- */
   function initNav() {
     var nav = document.querySelector('.nav');
     if (!nav) return;
@@ -57,7 +52,7 @@
     window.addEventListener('scroll', onScroll, { passive: true });
   }
 
-  /* ---------- Mobile menu ---------- */
+  /* ---------- menu responsive ---------- */
   function initMobileMenu() {
     var burger = document.querySelector('.nav-burger');
     var menu = document.querySelector('.mobile-menu');
@@ -70,7 +65,7 @@
     });
   }
 
-  /* ---------- Reveal on scroll ---------- */
+  /* ---------- Reveal ---------- */
   function initReveal() {
     var els = document.querySelectorAll('.reveal');
     if (!('IntersectionObserver' in window)) {
@@ -85,7 +80,7 @@
     els.forEach(function (el) { io.observe(el); });
   }
 
-  /* ---------- Count-up stats ---------- */
+  /* ---------- estadisticas ---------- */
   function countUp(el) {
     var target = parseFloat(el.getAttribute('data-count')) || 0;
     var suffix = el.getAttribute('data-suffix') || '';
@@ -112,7 +107,7 @@
     nums.forEach(function (n) { io.observe(n); });
   }
 
-  /* ---------- Breakdown bars ---------- */
+  /* ---------- barra ---------- */
   function initBars() {
     var bars = document.querySelectorAll('.bar-fill[data-pct]');
     if (!bars.length) return;
@@ -126,7 +121,7 @@
     bars.forEach(function (b) { io.observe(b); });
   }
 
-  /* ---------- Contact form ---------- */
+  /* ---------- formulario contacto ---------- */
   function initForm() {
     var form = document.querySelector('#contact-form');
     if (!form) return;
@@ -139,7 +134,7 @@
     });
   }
 
-  /* ---------- Tweaks panel ---------- */
+  /* ---------- ajustes ---------- */
   var panelEl = null;
 
   function buildPanel() {
@@ -222,7 +217,7 @@
     if (notify) post('__edit_mode_dismissed');
   }
 
-  /* ---------- Host edit-mode protocol ---------- */
+  /* ---------- host ---------- */
   function post(type, extra) {
     try { window.parent.postMessage(Object.assign({ type: type }, extra || {}), '*'); } catch (e) {}
   }
@@ -368,13 +363,13 @@
               'transition:background .2s,transform .15s,box-shadow .2s;font-family:inherit">❤ Donar ahora</button>' +
           '</div>' +
 
-        '</div>' + /* /.don-modal */
-      '</div>'; /* /#don-overlay */
+        '</div>' + 
+      '</div>'; 
 
     document.body.insertAdjacentHTML('beforeend', html);
   }
 
-  /* ---- Referencias (se resuelven después del buildModal) ---- */
+  /* ---- Referencias ---- */
   function el(id) { return document.getElementById(id); }
 
   /* ---- Mostrar total ---- */
@@ -382,7 +377,7 @@
     var t = el('don-total');
     if (!t) return;
     t.textContent = fmt(getTotal());
-    /* bump animation */
+
     t.style.transform = 'scale(1.15)';
     setTimeout(function() { t.style.transform = 'scale(1)'; }, 280);
   }
@@ -417,7 +412,7 @@
     var mo = el('don-modal');
     if (!ov) return;
     ov.style.display = 'flex';
-    /* Forzar reflow para que la transición funcione */
+
     void mo.offsetWidth;
     mo.style.transform = 'scale(1) translateY(0)';
     mo.style.opacity   = '1';
